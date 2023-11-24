@@ -34,7 +34,7 @@ class fotmobOpenAPI
                         $l_ids = [];
                         foreach ($countries as $c) if (is_string($c)) $c_ids[] = $c;
                         else $l_ids[] = $c;
-                        foreach ($matches as $k => $m) if (!in_array($m['ccode'], $c_ids) && !in_array($m['id'], $l_ids)) unset($matches[$k]);
+                        foreach ($matches as $k => $m) if (!in_array($m['ccode'], $c_ids) && !in_array($m['primaryId'], $l_ids)) unset($matches[$k]);
                 }
                 return $matches;
         }
